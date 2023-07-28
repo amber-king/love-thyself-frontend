@@ -1,4 +1,3 @@
-
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -10,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <NavBar /> */}
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/topic/:topic" element={<Quotes />} />

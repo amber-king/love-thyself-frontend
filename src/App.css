@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  background-color: lightgray;
+  color: black;
+  padding: 10px 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0 20px;
+}
+.app-title {
+  font-size: 1.5rem;
+}
+
+.topic-btns a {
+  color: red;
+  text-decoration: none;
+  margin-right: 10px;
+}

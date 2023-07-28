@@ -1,32 +1,41 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function Home() {
-  const [todaysQuote, setTodaysQuote] = useState("");
+  const { topic } = useParams();
+  const [todaysQuote, setTodaysQuote] = useState([]);
 
   useEffect(() => {
     const getTodayQuote = async () => {
       try {
-        const response = await axios.get("/api/quotes/today");
-        setTodaysQuote(response.data.quote);
+        const response = await axios.get(
+          `http://localhost:5000/api/quotes/today`
+        );
+
+        setTodaysQuote(response.data.quotes);
       } catch (error) {
-        console.error(error)("No Quote Today:", error);
+        console.error("Error fetching today's quote:", error);
+        setTodaysQuote([{ q: "Failed to fetch today's quote", a: "" }]);
       }
     };
     getTodayQuote();
   }, []);
 
+  console.log(todaysQuote);
+
   return (
     <div>
-      <h1> Today's Quote is: </h1>
-      <p>{todaysQuote}</p>
-      <div>
-        <Link to="/topic/inspiration">Inspiration 💭</Link>
-        <Link to="/topic/happiness">Happiness 😁</Link>
-        <Link to="/topic/confidence">Confidence 😎 </Link>
-        <Link to="/topic/truth">Truth 🤥 </Link>
-      </div>
+      <h3> Today's Quote is ⤵ </h3>
+      <ul>
+        {todaysQuote.map((todayQ) => (
+          <li key={todayQ.q}>
+            <blockquote>
+              &ldquo;{todayQ.q}&rdquo; — <footer>{todayQ.a}</footer>
+            </blockquote>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

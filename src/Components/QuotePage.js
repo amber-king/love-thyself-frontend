@@ -8,10 +8,13 @@ export default function Quotes() {
   useEffect(() => {
     const clickedQuoteTopic = async () => {
       try {
-        const response = await axios.get('/api/quotes/topic');
+        const response = await axios.get(
+          `http://localhost:5000/api/quotes/${topic}`
+        );
         setQuotes(response.data.quotes);
       } catch (error) {
         console.error("No specified quote found:", error);
+        setQuotes("Failed to fetch quotes");
       }
     };
     clickedQuoteTopic();
@@ -22,7 +25,11 @@ export default function Quotes() {
       <h1> {topic} Quotes</h1>
       <ul>
         {quotes.map((quote) => (
-          <li key={quote.id}></li>
+          <li key={quote.q}>
+            <blockquote>
+              &ldquo;{quote.q}&rdquo; — <footer>{quote.a}</footer>
+            </blockquote>
+          </li>
         ))}
       </ul>
     </div>
