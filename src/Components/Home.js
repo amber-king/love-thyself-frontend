@@ -11,7 +11,7 @@ export default function Home() {
         const response = await axios.get("/api/quotes/today");
         setTodaysQuote(response.data.quote);
       } catch (error) {
-        console.log(error)("No Quote Today:", error);
+        console.error(error)("No Quote Today:", error);
       }
     };
     getTodayQuote();
@@ -22,10 +22,10 @@ export default function Home() {
       <h1> Today's Quote is: </h1>
       <p>{todaysQuote}</p>
       <div>
-        <Link>Inspiration 💭</Link>
-        <Link>Happiness 😁</Link>
-        <Link>Confidence 😎 </Link>
-        <Link>Truth 🤥 </Link>
+        <Link to="/topic/inspiration">Inspiration 💭</Link>
+        <Link to="/topic/happiness">Happiness 😁</Link>
+        <Link to="/topic/confidence">Confidence 😎 </Link>
+        <Link to="/topic/truth">Truth 🤥 </Link>
       </div>
     </div>
   );
