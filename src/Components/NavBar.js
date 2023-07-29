@@ -11,9 +11,9 @@ export default function NavBar() {
         </div>
 
         <div className="topic-btns">
-          <Link to="/topic/inspiration">Inspiration 💭</Link>
+          {/* <Link to="/topic/inspiration">Inspiration 💭</Link> */}
           <Link to="/topic/happiness">Happiness 😁</Link>
-          <Link to="/topic/confidence">Confidence 😎 </Link>
+          {/* <Link to="/topic/confidence">Confidence 😎 </Link> */}
           <Link to="/topic/truth">Truth 🤥 </Link>
           <Link to="/topic/today">Today ☀️ </Link>
         </div>
