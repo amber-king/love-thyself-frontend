@@ -10,7 +10,7 @@ export default function NavBar({ tag, onTagChange }) {
       <Link to="/" className="nav-link-btn">
         Home
       </Link>
-      
+
       <Link to="/api/quotes" className="nav-link-btn">
         All Quotes
       </Link>
@@ -21,3 +21,4 @@ export default function NavBar({ tag, onTagChange }) {
     </nav>
   );
 }
+
