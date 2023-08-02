@@ -14,11 +14,12 @@ export default function NavBar({ tag, onTagChange }) {
       <Link to="/api/quotes" className="nav-link-btn">
         All Quotes
       </Link>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={tag} onChange={onTagChange} />
-        <button type="submit">Enter</button>
-      </form>
+      <div className="search-engine">
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={tag} onChange={onTagChange} />
+          <button type="submit">Enter</button>
+        </form>
+      </div>
     </nav>
   );
 }
-
