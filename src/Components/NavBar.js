@@ -1,23 +1,15 @@
-import { Link } from "react-router-dom";
+import React from "react";
 
-export default function NavBar() {
+export default function NavBar({ tag, onTagChange }) {
+  const handleSubmit = (event) => {
+    event.preventDafault();
+  };
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <h1 className="app-title">Love Thyself ❤️</h1>
-        <br></br>
-        <div className="home-btn">
-          <Link to="/">🪞</Link>
-        </div>
-
-        <div className="topic-btns">
-          {/* <Link to="/topic/inspiration">Inspiration 💭</Link> */}
-          <Link to="/topic/happiness">Happiness 😁</Link>
-          {/* <Link to="/topic/confidence">Confidence 😎 </Link> */}
-          <Link to="/topic/truth">Truth 🤥 </Link>
-          <Link to="/topic/today">Today ☀️ </Link>
-        </div>
-      </div>
+    <nav>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={tag} onChange={onTagChange} />
+        <button type="submit">Enter</button>
+      </form>
     </nav>
   );
 }
