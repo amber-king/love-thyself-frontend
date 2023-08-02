@@ -15,23 +15,85 @@ a {
   color: inherit;
 }
 
-/* Style for the navbar */
+/* Style for the navbar links as buttons */
+.nav-link-button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: tan;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link-button:hover {
+  background-color: #bad3ed;
+}
+
+/* Style for the submit button */
+nav form {
+  display: inline-block;
+}
+
+nav form input {
+  margin-right: 10px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+nav form button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: tan;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-link-btn {
+  margin-right: 10px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: tan;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav form button:hover {
+  background-color: #bad3ed;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* Style for the search engine */
 .search-engine {
-  margin: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .search-engine form {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 300px;
-  margin: 0 auto;
 }
 
 .search-engine input {
-  padding: 8px;
+  margin-right: 10px;
+  padding: 8px 16px;
   font-size: 1rem;
-  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .search-engine button {
@@ -39,16 +101,13 @@ a {
   font-size: 1rem;
   background-color: tan;
   color: black;
-  border-radius: 0 5px 5px 0;
   border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Style for button hover effect */
 .search-engine button:hover {
   background-color: #bad3ed;
 }
-
-
-
 
 

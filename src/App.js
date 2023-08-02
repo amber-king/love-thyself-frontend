@@ -2,17 +2,15 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import AllQuotes from "./Components/AllQuotes";
 import TagQuote from "./Components/TagQuote";
-import SearchEngine from "./Components/SearchEngine"
+// import SearchEngine from "./Components/SearchEngine"
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
 
@@ -21,7 +19,7 @@ function App() {
           <Route path="/api/quotes/:tag" element={<TagQuote />} exact />
           {/* <Route path="/" element={<SearchEngine/>}/> */}
         </Routes>
-        <SearchEngine />
+        {/* <SearchEngine /> */}
       </Router>
     </div>
   );
