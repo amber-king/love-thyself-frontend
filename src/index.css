@@ -126,4 +126,30 @@ nav form button:hover {
   background-color: #bad3ed;
 }
 
+/* AllQuotes.css */
+
+/* Style for the card container */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-image: linear-gradient(to right, #5a3f37, #2c7744);
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the quote content */
+.quote-content {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for the author */
+.author {
+  font-size: 14px;
+  color: #777;
+}
+
 

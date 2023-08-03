@@ -41,8 +41,9 @@ export default function AllQuotes() {
   return (
     <div>
       <h2>All Quotes</h2>
+
       {quotes.map((quote) => (
-        <div key={quote._id}>
+        <div className="card" key={quote._id}>
           <p>"{quote.content}"</p>
           <p>- {quote.author}</p>
         </div>
