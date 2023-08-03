@@ -49,7 +49,7 @@ export default function AllQuotes() {
           
         </div>
       ))}
-      <Link to="/">Go back Home</Link>
+      <Link to="/">🏠</Link>
     </div>
   );
 }

@@ -12,7 +12,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
+        <div className="nav-container">
+          <NavBar />
+          <SearchEngine />
+        </div>
+
         <Routes>
           <Route path="/" element={<Home />} />
 
@@ -20,7 +24,6 @@ function App() {
 
           <Route path="/api/quotes/:tag" element={<TagQuote />} exact />
         </Routes>
-        <SearchEngine />
       </Router>
     </div>
   );

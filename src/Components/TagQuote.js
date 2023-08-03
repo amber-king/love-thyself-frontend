@@ -37,7 +37,7 @@ export default function TagQuote() {
           ))}
         </div>
       )}
-      <Link to="/">🏠</Link>
+   
     </div>
   );
 }
