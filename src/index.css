@@ -46,6 +46,7 @@ nav{
 /* Style for the submit button */
 nav form {
   display: inline-block;
+
 }
 
 nav form input {
@@ -85,6 +86,7 @@ nav form button:hover {
 .nav-links {
   display: flex;
   align-items: center;
+  margin-top: 30px;
 }
 
 
@@ -92,10 +94,14 @@ nav form button:hover {
 .search-engine {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  
 }
 
 .search-engine form {
   display: flex;
+  
 }
 
 .search-engine input {
