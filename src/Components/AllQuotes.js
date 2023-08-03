@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 export default function AllQuotes() {
   const [quotes, setQuotes] = useState({});
@@ -40,16 +39,18 @@ export default function AllQuotes() {
 
   return (
     <div>
-     <center><h2 className="allquotes-title">All Quotes “ ”</h2></center> 
+      <center>
+        <h2 className="allquotes-title">All Quotes “ ”</h2>
+      </center>
 
       {quotes.map((quote) => (
         <div className="card" key={quote._id}>
-         <b><p>"{quote.content}"</p></b> 
+          <b>
+            <p>"{quote.content}"</p>
+          </b>
           <p>- {quote.author}</p>
-          
         </div>
       ))}
-      <Link to="/">🏠</Link>
     </div>
   );
 }

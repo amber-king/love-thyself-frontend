@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function TagQuote() {
   const { tag } = useParams();
@@ -10,6 +10,9 @@ export default function TagQuote() {
     const taggedQ = async () => {
       try {
         const response = await fetch(`http://localhost:5000/api/quotes/${tag}`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch quotes");
+        }
         const data = await response.json();
         setQuotes(data.quotes);
         setLoading(false);
@@ -37,7 +40,6 @@ export default function TagQuote() {
           ))}
         </div>
       )}
-   
     </div>
   );
 }
