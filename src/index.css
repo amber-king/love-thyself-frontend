@@ -141,15 +141,16 @@ nav form button:hover {
 
 /* Style for the quote content */
 .quote-content {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: #333;
 }
 
 /* Style for the author */
 .author {
-  font-size: 14px;
+  font-size: 10px;
   color: #777;
 }
+
 
 

@@ -4,7 +4,7 @@ export default function Home() {
     <div className="Home">
      
       <center>
-        <h1>Welcome to Love Thyself❤️ </h1>
+        <h1>Welcome to Love Thyself ❤️ </h1>
       </center>
       <br></br>
       <center>

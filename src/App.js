@@ -1,5 +1,5 @@
 // App.js
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import NavBar from "./Components/NavBar"; // Update the import statement for NavBar
@@ -9,15 +9,10 @@ import TagQuote from "./Components/TagQuote";
 import SearchEngine from "./Components/SearchEngine";
 
 function App() {
-  const [tag, setTag] = useState("");
-
-  const handleTagChange = (event) => {
-    setTag(event.target.value);
-  };
   return (
     <div className="App">
       <Router>
-        <NavBar tag={tag} onTagChange={handleTagChange} />
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
 

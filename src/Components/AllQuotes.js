@@ -11,7 +11,7 @@ export default function AllQuotes() {
       try {
         const response = await fetch("http://localhost:5000/api/quotes");
         const data = await response.json();
-        console.log("API Response:", data);
+        // console.log("API Response:", data);
         if (Array.isArray(data.quotes)) {
           setQuotes(data.quotes);
         } else {
@@ -28,8 +28,8 @@ export default function AllQuotes() {
 
     fetchQuotes();
   }, []);
-  console.log("Quotes:", quotes);
-  console.log("Quotes Type:", typeof quotes);
+  // console.log("Quotes:", quotes);
+  // console.log("Quotes Type:", typeof quotes);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -40,12 +40,13 @@ export default function AllQuotes() {
 
   return (
     <div>
-      <h2>All Quotes</h2>
+     <center><h2 className="allquotes-title">All Quotes “ ”</h2></center> 
 
       {quotes.map((quote) => (
         <div className="card" key={quote._id}>
-          <p>"{quote.content}"</p>
+         <b><p>"{quote.content}"</p></b> 
           <p>- {quote.author}</p>
+          
         </div>
       ))}
       <Link to="/">Go back Home</Link>
