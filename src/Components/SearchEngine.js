@@ -7,7 +7,7 @@ export default function SearchEngine() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate(`/api/quotes/${tag}`);
+    navigate(`/api/search/quotes?tag=${tag}`);
   };
 
   return (

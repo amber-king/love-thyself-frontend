@@ -49,6 +49,11 @@ export default function AllQuotes() {
             <p>"{quote.content}"</p>
           </b>
           <p>- {quote.author}</p>
+          {quote.tags && (
+            <b>
+              <p>Tags: {Array.from(new Set(quote.tags)).join(", ")}</p>
+            </b>
+          )}
         </div>
       ))}
     </div>
