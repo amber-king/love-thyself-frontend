@@ -1,12 +1,11 @@
-// App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import NavBar from "./Components/NavBar"; // Update the import statement for NavBar
+import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import AllQuotes from "./Components/AllQuotes";
 import TagQuote from "./Components/TagQuote";
-import SearchEngine from "./Components/SearchEngine";
+import TagsPage from "./Components/TagsPage";
 
 function App() {
   return (
@@ -14,15 +13,15 @@ function App() {
       <Router>
         <div className="nav-container">
           <NavBar />
-          <SearchEngine />
+          <Routes>
+            <Route path="/" element={<TagsPage />} />
+            <Route path="/tag/:tagSlug" element={<TagQuote />} />
+          </Routes>
         </div>
 
         <Routes>
           <Route path="/" element={<Home />} />
-
           <Route path="/api/quotes" element={<AllQuotes />} exact />
-
-          <Route path="/api/quotes/:tag" element={<TagQuote />} exact />
         </Routes>
       </Router>
     </div>

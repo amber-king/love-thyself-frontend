@@ -1,51 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-export default function TagQuote() {
-  const {tags} = useParams()
-const [quotes, setQuotes] = useState([]);
-  const [loading, setLoading] = useState(true);
+const TagQuotesPage = () => {
+  const { tagSlug } = useParams();
+  const [tagQuotes, setTagQuotes] = useState([]);
 
   useEffect(() => {
-    const taggedQ = async () => {
+    const fetchTagQuotes = async () => {
       try {
-        const response = await fetch(
-          `/api/search/quotes?tags=${tags}`
-        );
+        const response = await fetch(`/api/search/quotes?tag=${tagSlug}`);
         if (!response.ok) {
-          throw new Error("Failed to fetch quotes");
+          throw new Error("Failed to fetch tag quotes");
         }
         const data = await response.json();
-        setQuotes(data.quotes);
-        setLoading(false);
+        setTagQuotes(data.quotes);
       } catch (error) {
-        console.error("Error fetching quotes:", error);
-        setLoading(false);
+        console.error("Error fetching tag quotes:", error);
       }
     };
-    taggedQ();
-  }, [tags]);
+    fetchTagQuotes();
+  }, [tagSlug]);
 
   return (
-    <div>
-      <h2> Quotes for {tags}</h2>
-      {loading ? (
-        <div>Loading...</div>
-      ) : (
-        <div>
-          {quotes.map((quote) => (
-            <div key={quote._id}>
-              <p>"{quote.quoteText}"</p>
-              <p>- {quote.quoteAuthor}</p>
-              {quote.tags && (
-                <b>
-                  <p>Tags: {Array.from(new Set(quote.tags)).join(", ")}</p>
-                </b>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
+    <div className="tag-quotes-page">
+      <h2>Quotes related to {tagSlug}</h2>
+      <ul>
+        {tagQuotes.map((quote) => (
+          <li key={quote._id}>{quote.content}</li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
+
+export default TagQuotesPage;
