@@ -10,8 +10,8 @@ export default function NavBar() {
       <Link to="/api/quotes" className="nav-link-btn">
         All Quotes❝❞
       </Link>
-      <Link to="/tag-categories" className="tag-link-btn">
-        Tag Categories 🏷️
+      <Link to="/api/authors" className="authors-btn">
+        All Authors 🏷️
       </Link>
     </nav>
   );

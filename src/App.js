@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import AllQuotes from "./Components/AllQuotes";
-import TagQuote from "./Components/TagQuote";
-import TagPage from "./Components/TagsPage";
+import SearchByAuthor from "./Components/SearchByAuthor.js";
+import AuthorQuotes from "./Components/AuthorQuotes";
+import AuthorPage from "./Pages/AuthorPage";
 
 function App() {
   return (
@@ -16,9 +17,11 @@ function App() {
           <div className="main-content">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/tag-categories" element={<TagPage />} />
-              <Route path="/tag/:tagSlug" element={<TagQuote />} />
+              <Route path="/author/:authorName" element={<AuthorQuotes />} />
+              <Route path="/search/author" element={<SearchByAuthor />} />
               <Route path="/api/quotes" element={<AllQuotes />} />
+              <Route path="/api/authors" element={<AuthorPage />} />{" "}
+              {/* Add this line */}
             </Routes>
           </div>
         </div>
