@@ -5,7 +5,7 @@ import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import AllQuotes from "./Components/AllQuotes";
 import TagQuote from "./Components/TagQuote";
-import TagsPage from "./Components/TagsPage";
+import TagPage from "./Components/TagsPage";
 
 function App() {
   return (
@@ -13,16 +13,15 @@ function App() {
       <Router>
         <div className="nav-container">
           <NavBar />
-          <Routes>
-            <Route path="/" element={<TagsPage />} />
-            <Route path="/tag/:tagSlug" element={<TagQuote />} />
-          </Routes>
+          <div className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/tag-categories" element={<TagPage />} />
+              <Route path="/tag/:tagSlug" element={<TagQuote />} />
+              <Route path="/api/quotes" element={<AllQuotes />} />
+            </Routes>
+          </div>
         </div>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/api/quotes" element={<AllQuotes />} exact />
-        </Routes>
       </Router>
     </div>
   );

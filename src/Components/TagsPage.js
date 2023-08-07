@@ -7,12 +7,12 @@ const TagPage = () => {
   useEffect(() => {
     const fetchTagCategories = async () => {
       try {
-        const response = await fetch("/api/tags");
+        const response = await fetch("https://api.quotable.io/tags");
         if (!response.ok) {
           throw new Error("Failed to fetch tag categories");
         }
         const data = await response.json();
-        setTagCategories(data.tags);
+        setTagCategories(data);
       } catch (error) {
         console.error("Error fetching tag categories:", error);
       }
@@ -22,10 +22,10 @@ const TagPage = () => {
 
   return (
     <div className="tag-page">
-      <h2>Tag Categories</h2>
+      {/* <h2>Tag Categories</h2> */}
       <div className="tag-cards">
         {tagCategories.map((tag) => (
-          <Link key={tag.slug} to={`/tag/${tag.slug}`}>
+          <Link key={tag.slug} to={`/tag/${tag.slug}`} className="tag-card-link">
             <div className="tag-card">
               {tag.name}
             </div>
@@ -37,4 +37,5 @@ const TagPage = () => {
 };
 
 export default TagPage;
+
 

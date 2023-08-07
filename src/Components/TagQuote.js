@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const TagQuotesPage = () => {
+const TagQuote = () => {
   const { tagSlug } = useParams();
   const [tagQuotes, setTagQuotes] = useState([]);
 
@@ -33,4 +33,4 @@ const TagQuotesPage = () => {
   );
 };
 
-export default TagQuotesPage;
+export default TagQuote;
