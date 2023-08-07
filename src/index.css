@@ -123,9 +123,18 @@ nav form button {
   color: #777;
 }
 
-.nav-container {
+/* .nav{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-image: linear-gradient(to bottom right, #5a3f37, #2c7744);
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+.navbar {
+ 
   align-items: center;
   padding: 1rem;
   background-image: linear-gradient(to bottom right, #5a3f37, #2c7744);
