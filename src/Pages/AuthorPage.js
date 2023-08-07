@@ -12,7 +12,7 @@ const AuthorPage = () => {
           throw new Error("Failed to fetch authors");
         }
         const data = await response.json();
-        setAuthors(data.results); // Set the authors array from the 'results' property
+        setAuthors(data.results);
       } catch (error) {
         console.error("Error fetching authors:", error);
       }
@@ -26,7 +26,7 @@ const AuthorPage = () => {
         {authors.map((author) => (
           <Link
             key={author._id}
-            to={`/author/${encodeURIComponent(author.name)}`}
+            to={`/author/${encodeURIComponent(author.name)}`} // Link to the AuthorQuotes component
             className="author-card"
           >
             {author.name}
@@ -38,4 +38,3 @@ const AuthorPage = () => {
 };
 
 export default AuthorPage;
-

@@ -1,23 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const SearchByAuthor = ({ onSearch }) => {
-  const [authorName, setAuthorName] = useState("");
-
-  const handleSearch = () => {
-    onSearch(authorName);
-  };
-
+const SearchByAuthor = () => {
   return (
     <div className="search-by-author">
-      <input
-        type="text"
-        placeholder="Enter author's name"
-        value={authorName}
-        onChange={(e) => setAuthorName(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search by Author</button>
+      <h2>Search by Author</h2>
+      <Link to="/all-authors" className="nav-link-btn">
+        All Authors
+      </Link>
     </div>
   );
 };
 
 export default SearchByAuthor;
+
