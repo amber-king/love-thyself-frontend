@@ -7,7 +7,7 @@ const AuthorPage = () => {
   useEffect(() => {
     const fetchAuthors = async () => {
       try {
-        const response = await fetch("https://api.quotable.io/authors");
+        const response = await fetch("http://localhost:5000/api/authors");
         if (!response.ok) {
           throw new Error("Failed to fetch authors");
         }
@@ -24,13 +24,15 @@ const AuthorPage = () => {
     <div className="author-page">
       <div className="author-cards">
         {authors.map((author) => (
-          <Link
-            key={author._id}
-            to={`/author/${encodeURIComponent(author.name)}`} // Link to the AuthorQuotes component
-            className="author-card"
-          >
-            {author.name}
-          </Link>
+          <div key={author._id} className="author-card">
+            <Link to={`/author/${encodeURIComponent(author.slug)}`} className="author-name">
+              {author.name}
+            </Link>
+            <p>Quote Count: <b>{author.quoteCount}</b></p>
+            <Link to={`/author/${encodeURIComponent(author.slug)}`} className="fetch-quotes-btn">
+              Fetch Quotes
+            </Link>
+          </div>
         ))}
       </div>
     </div>

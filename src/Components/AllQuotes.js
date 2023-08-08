@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import QuoteSearch from "./QuoteSearch";
 
 export default function AllQuotes() {
   const [quotes, setQuotes] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [filteredQuotes, setFilteredQuotes] = useState([]);
 
   useEffect(() => {
     const fetchQuotes = async () => {
@@ -13,6 +15,7 @@ export default function AllQuotes() {
         // console.log("API Response:", data);
         if (Array.isArray(data.quotes)) {
           setQuotes(data.quotes);
+          setFilteredQuotes(data.quotes);
         } else {
           setError("Invaild API response,");
         }
@@ -30,6 +33,13 @@ export default function AllQuotes() {
   // console.log("Quotes:", quotes);
   // console.log("Quotes Type:", typeof quotes);
 
+  const handleSearch = (searchQuery) => {
+    const filteredQuotes = quotes.filter((quote) =>
+      quote.content.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setFilteredQuotes(filteredQuotes);
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -43,7 +53,9 @@ export default function AllQuotes() {
         <h2 className="allquotes-title">All Quotes “ ”</h2>
       </center>
 
-      {quotes.map((quote) => (
+      <QuoteSearch onSearch={(searchQuery) => handleSearch(searchQuery)} />
+
+      {filteredQuotes.map((quote) => (
         <div className="card" key={quote._id}>
           <b>
             <p>"{quote.content}"</p>

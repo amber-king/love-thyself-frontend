@@ -20,8 +20,9 @@ function App() {
               <Route path="/author/:authorName" element={<AuthorQuotes />} />
               <Route path="/search/author" element={<SearchByAuthor />} />
               <Route path="/api/quotes" element={<AllQuotes />} />
-              <Route path="/api/authors" element={<AuthorPage />} />{" "}
-              {/* Add this line */}
+              <Route path="/api/authors" element={<AuthorPage />} />
+              <Route path="/all-quotes" element={<AllQuotes />} />{" "}
+              {/* Add this line for the AllQuotes page */}
             </Routes>
           </div>
         </div>
