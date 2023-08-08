@@ -50,7 +50,14 @@ export default function AllQuotes() {
   return (
     <div>
       <center>
-        <h2 className="allquotes-title">All Quotes “ ”</h2>
+        <h1 className="allquotes-title">All Quotes “ ”</h1>
+        <h4>
+          <b>Instructions 📝: </b> Type a keyword in the search engine to receive
+          all corresponding quotes for it
+        </h4>
+        <p>
+          ⚠️ IF no results, then there was no quote that matched the keyword 🫤
+        </p>
       </center>
 
       <QuoteSearch onSearch={(searchQuery) => handleSearch(searchQuery)} />
