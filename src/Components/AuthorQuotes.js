@@ -1,43 +1,38 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-const AuthorPage = () => {
-  const [authors, setAuthors] = useState([]);
+const AuthorQuotes = () => {
+  const { authorName } = useParams();
+  const [authorQuotes, setAuthorQuotes] = useState([]);
 
   useEffect(() => {
-    const fetchAuthors = async () => {
+    const fetchAuthorQuotes = async () => {
       try {
-        const response = await fetch("https://api.quotable.io/authors");
+        const response = await fetch(
+          `/api/search/quotes?author=${encodeURIComponent(authorName)}`
+        );
         if (!response.ok) {
-          throw new Error("Failed to fetch authors");
+          throw new Error("Failed to fetch author quotes");
         }
         const data = await response.json();
-        console.log("API Response:", data);
-        setAuthors(data.results); // Extract the array of authors
+        setAuthorQuotes(data.quotes); // Use data.quotes instead of data.results
       } catch (error) {
-        console.error("Error fetching authors:", error);
+        console.error("Error fetching author quotes:", error);
       }
     };
-    fetchAuthors();
-  }, []);
+    fetchAuthorQuotes();
+  }, [authorName]);
 
   return (
-    <div className="author-page">
-      <div className="author-cards">
-        {authors.map((author) => (
-          <Link
-            key={author._id}
-            to={`/author/${encodeURIComponent(author.name)}`} // Ensure the correct route
-            className="author-card"
-          >
-            {author.name}
-          </Link>
+    <div className="author-quotes-page">
+      <h2>Quotes by {authorName}</h2>
+      <ul>
+        {authorQuotes.map((quote) => (
+          <li key={quote._id}>{quote.content}</li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
 
-export default AuthorPage;
-
-
+export default AuthorQuotes;
