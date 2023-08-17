@@ -12,7 +12,7 @@ const AuthorPage = () => {
           throw new Error("Failed to fetch authors");
         }
         const data = await response.json();
-        console.log("Authors data:", data);
+        // console.log("Authors data:", data);
         setAuthors(data.authors);
       } catch (error) {
         console.error("Error fetching authors:", error);
@@ -30,6 +30,7 @@ const AuthorPage = () => {
           This page contains all the authors and the number of quotes they have
           avaiable, which can be seen by clicking on the desired author
         </h4>
+        <p>⚠️ IF no results, then there was no quote that matched the author 🫤</p>
       </center>
       <div className="author-cards">
         {authors && authors.length > 0 ? (

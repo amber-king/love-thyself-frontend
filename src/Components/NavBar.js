@@ -13,6 +13,9 @@ export default function NavBar() {
       <Link to="/api/authors" className="authors-btn">
         All Authors 🏷️
       </Link>
+      <Link to="/about" className="abt-link-btn">
+        About & More...ℹ
+      </Link>
     </nav>
   );
 }

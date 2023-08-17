@@ -1,3 +1,6 @@
+import React from "react";
+
+
 export default function Home() {
   return (
     <div className="Home">
@@ -12,6 +15,7 @@ export default function Home() {
         </h4>
       </center>
       <br></br>
+
       <center>
         <img
           src="https://usagif.com/wp-content/uploads/gif-heart-47.gif"
