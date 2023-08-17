@@ -12,7 +12,8 @@ const AuthorPage = () => {
           throw new Error("Failed to fetch authors");
         }
         const data = await response.json();
-        setAuthors(data.results);
+        console.log("Authors data:", data);
+        setAuthors(data.authors);
       } catch (error) {
         console.error("Error fetching authors:", error);
       }
@@ -30,21 +31,23 @@ const AuthorPage = () => {
           avaiable, which can be seen by clicking on the desired author
         </h4>
       </center>
-      <div className="author-cards">
-        {authors.map((author) => (
-          <Link
-            key={author._id}
-            to={`/author/${encodeURIComponent(author.slug)}`} // Link to the AuthorQuotes component
-            className="author-card"
-          >
-   
-            <div>
-              
-              <span>{author.name}</span> <br></br>
-              <span>Quote Count: {author.quoteCount}</span>
-            </div>
-          </Link>
-        ))}
+      <div className="author-card">
+        {authors && authors.length > 0 ? (
+          authors.map((author) => (
+            <Link
+              key={author._id}
+              to={`/author/${encodeURIComponent(author.slug)}`}
+              className="author-card"
+            >
+              <div>
+                <span>{author.name}</span> <br></br>
+                <span>Quote Count: {author.quoteCount}</span>
+              </div>
+            </Link>
+          ))
+        ) : (
+          <p>No authors available</p>
+        )}
       </div>
     </div>
   );

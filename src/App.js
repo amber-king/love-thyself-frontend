@@ -21,7 +21,7 @@ function App() {
               <Route path="/search/author" element={<SearchByAuthor />} />
               <Route path="/api/quotes" element={<AllQuotes />} />
               <Route path="/api/authors" element={<AuthorPage />} />
-              <Route path="/all-quotes" element={<AllQuotes />} />{" "}
+              {/* <Route path="/all-quotes" element={<AllQuotes />} />{" "} */}
             </Routes>
           </div>
         </div>

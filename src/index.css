@@ -5,7 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(https://img.freepik.com/free-photo/abstract-smooth-brown-wall-background-layout-design-studio-room-web-template-business-report-with-smooth-circle-gradient-color_1258-54062.jpg);
-  color: black
+  color: black;
 }
 
 code {
@@ -144,14 +144,16 @@ nav form button {
 /* AuthorPage.css */
 
 .author-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
   align-items: center;
   justify-content: center;
   padding: 10px;
   margin: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: tan;
+  /* background-color: tan; */
   color: black;
   text-align: center;
   cursor: pointer;
@@ -164,10 +166,7 @@ nav form button {
 
 .author-page {
   padding: 20px;
+  text-align: center;
 }
 
-.author-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-}
+
