@@ -29,7 +29,7 @@ const AuthorQuotes = () => {
       <h2>Quotes by {authorSlug}</h2>
       <ul>
         {authorQuotes.map((quote) => (
-          <li key={quote._id}></li>
+          <li key={quote._id}>{quote.content}</li>
         ))}
       </ul>
     </div>
