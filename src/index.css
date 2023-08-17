@@ -74,7 +74,8 @@ nav form button {
   cursor: pointer;
 }
 
-.nav-link-btn:hover {
+.nav-link-btn:hover,
+.authors-btn:hover {
   background-color: #bad3ed;
   opacity: 0.2;
 }
@@ -143,7 +144,7 @@ nav form button {
 }
 /* AuthorPage.css */
 
-.author-card{
+.author-card {
   display: flex;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
@@ -158,7 +159,7 @@ nav form button {
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 150px; 
+  width: 150px;
   height: 100px;
 }
 

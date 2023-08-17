@@ -14,8 +14,8 @@ export default function Home() {
       <br></br>
       <center>
         <img
-          src="https://media.tenor.com/UxLjfnJs1owAAAAd/be-kind-to-yourself-hugs.gif"
-          alt="self-hug-img"
+          src="https://usagif.com/wp-content/uploads/gif-heart-47.gif"
+          alt="heart-img"
         ></img>
       </center>
     </div>
