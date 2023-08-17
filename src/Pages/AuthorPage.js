@@ -31,7 +31,7 @@ const AuthorPage = () => {
           avaiable, which can be seen by clicking on the desired author
         </h4>
       </center>
-      <div className="author-card">
+      <div className="author-cards">
         {authors && authors.length > 0 ? (
           authors.map((author) => (
             <Link

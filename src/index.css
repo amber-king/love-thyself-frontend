@@ -54,7 +54,7 @@ nav form input {
 nav form button {
   padding: 8px 16px;
   font-size: 1rem;
-  background-color: tan;
+  /* background-color: tan; */
   color: black;
   border: none;
   border-radius: 5px;
@@ -143,8 +143,8 @@ nav form button {
 }
 /* AuthorPage.css */
 
-.author-card {
-  display: grid;
+.author-card{
+  display: flex;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   align-items: center;
@@ -153,11 +153,13 @@ nav form button {
   margin: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  /* background-color: tan; */
+  background-color: tan;
   color: black;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 150px; 
+  height: 100px;
 }
 
 .author-card:hover {
@@ -169,4 +171,9 @@ nav form button {
   text-align: center;
 }
 
-
+.author-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
