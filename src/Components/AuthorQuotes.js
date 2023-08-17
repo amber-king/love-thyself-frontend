@@ -10,6 +10,7 @@ const AuthorQuotes = () => {
       try {
         const response = await fetch(
           `http://localhost:5000/api/quotes/by-author/${authorSlug}`
+        
         );
         if (!response.ok) {
           throw new Error("Failed to fetch author quotes");
@@ -28,7 +29,7 @@ const AuthorQuotes = () => {
       <h2>Quotes by {authorSlug}</h2>
       <ul>
         {authorQuotes.map((quote) => (
-          <li key={quote._id}>{quote.content}</li>
+          <li key={quote._id}></li>
         ))}
       </ul>
     </div>

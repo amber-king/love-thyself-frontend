@@ -22,17 +22,28 @@ const AuthorPage = () => {
 
   return (
     <div className="author-page">
+      <center>
+        {" "}
+        <h1> All Authors ✍︎ </h1>
+        <h4>
+          This page contains all the authors and the number of quotes they have
+          avaiable, which can be seen by clicking on the desired author
+        </h4>
+      </center>
       <div className="author-cards">
         {authors.map((author) => (
-          <div key={author._id} className="author-card">
-            <Link to={`/author/${encodeURIComponent(author.slug)}`} className="author-name">
-              {author.name}
-            </Link>
-            <p>Quote Count: <b>{author.quoteCount}</b></p>
-            <Link to={`/author/${encodeURIComponent(author.slug)}`} className="fetch-quotes-btn">
-              Fetch Quotes
-            </Link>
-          </div>
+          <Link
+            key={author._id}
+            to={`/author/${encodeURIComponent(author.slug)}`} // Link to the AuthorQuotes component
+            className="author-card"
+          >
+   
+            <div>
+              
+              <span>{author.name}</span> <br></br>
+              <span>Quote Count: {author.quoteCount}</span>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

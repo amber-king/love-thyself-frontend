@@ -17,12 +17,11 @@ function App() {
           <div className="main-content">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/author/:authorName" element={<AuthorQuotes />} />
+              <Route path="/author/:authorSlug" element={<AuthorQuotes />} />
               <Route path="/search/author" element={<SearchByAuthor />} />
               <Route path="/api/quotes" element={<AllQuotes />} />
               <Route path="/api/authors" element={<AuthorPage />} />
               <Route path="/all-quotes" element={<AllQuotes />} />{" "}
-              {/* Add this line for the AllQuotes page */}
             </Routes>
           </div>
         </div>

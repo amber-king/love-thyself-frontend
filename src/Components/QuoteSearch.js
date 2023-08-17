@@ -8,15 +8,17 @@ const QuoteSearch = ({ onSearch }) => {
   };
 
   return (
-    <div className="quote-search">
-      <input
-        type="text"
-        placeholder="Search for quotes..."
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
-    </div>
+    <center>
+      <div className="quote-search">
+        <input
+          type="text"
+          placeholder="Search for quotes..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
+    </center>
   );
 };
 

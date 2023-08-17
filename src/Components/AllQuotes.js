@@ -52,12 +52,14 @@ export default function AllQuotes() {
       <center>
         <h1 className="allquotes-title">All Quotes “ ”</h1>
         <h4>
-          <b>Instructions 📝: </b> Type a keyword in the search engine to receive
-          all corresponding quotes for it
+          <b>Instructions 📝: </b> Type a keyword in the search engine to
+          receive all corresponding quotes for it
         </h4>
-        <p>
-          ⚠️ IF no results, then there was no quote that matched the keyword 🫤
-        </p>
+        <b>
+          <p>
+            ⚠️ IF no results, then there was no quote that matched the keyword 🫤
+          </p>
+        </b>
       </center>
 
       <QuoteSearch onSearch={(searchQuery) => handleSearch(searchQuery)} />
