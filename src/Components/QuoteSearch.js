@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// this function handles the search engine functionality - imported on all quotes js file where it displays"
 const QuoteSearch = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
 

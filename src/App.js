@@ -5,7 +5,7 @@ import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import About from "./Pages/AboutPage";
 import AllQuotes from "./Components/AllQuotes";
-import SearchByAuthor from "./Components/SearchByAuthor.js";
+
 import AuthorQuotes from "./Components/AuthorQuotes";
 import AuthorPage from "./Pages/AuthorPage";
 
@@ -20,10 +20,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/author/:authorSlug" element={<AuthorQuotes />} />
-              <Route path="/search/author" element={<SearchByAuthor />} />
+
               <Route path="/api/quotes" element={<AllQuotes />} />
               <Route path="/api/authors" element={<AuthorPage />} />
-              {/* <Route path="/all-quotes" element={<AllQuotes />} />{" "} */}
             </Routes>
           </div>
         </div>
