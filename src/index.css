@@ -76,8 +76,9 @@ nav form button {
 }
 
 .nav-link-btn:hover,
-.authors-btn:hover {
-  background-color: #bad3ed;
+.authors-btn:hover,
+.abt-link-btn:hover {
+  background-color: silver;
   opacity: 0.2;
 }
 
@@ -197,7 +198,72 @@ nav form button {
 }
 
 /* Styling for about page css set up */
+.about-page {
+  text-align: center;
+}
 
-.author-info {
-  
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.author-description {
+  flex: 1;
+}
+
+.author-buttons {
+  margin-top: 20px;
+}
+
+.author-button {
+  margin-right: 10px;
+}
+.about-page {
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.author-description {
+  flex: 1;
+}
+
+.author-buttons {
+  margin-top: 20px;
+}
+
+.author-button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  background-color: darkkhaki;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.author-button:hover {
+  background-color: saddlebrown;
 }
