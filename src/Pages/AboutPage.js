@@ -1,5 +1,6 @@
 import React from "react";
 
+// this page gives a peak at who the developer is, their contact info & what the site has to offer
 const About = () => {
   const emailAmber = "amberking@pursuit.org";
 
@@ -37,7 +38,7 @@ const About = () => {
                   Author catalog that is fully click-through and will redirect
                   you to a list of quotes by your choosen author .
                 </p>
-                Each of the pages to navigate through have a breifg description of what can be found there and how to use each page. Also, explains why some results do not appear.
+                Each of the pages to navigate through have a brief description of what can be found there and how to use each page. Also, explains why some results do not appear.
               </h3>
               <p>
                 Below is links to all my contact information, for any questions
