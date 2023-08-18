@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// all navigation links -buttons for user interaction to each page
 export default function NavBar() {
   return (
     <nav>
