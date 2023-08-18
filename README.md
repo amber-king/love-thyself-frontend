@@ -2,7 +2,7 @@
 
 <hr>
 
-## Frontend Netlify Link →
+## Frontend Netlify Link → https://main--love-thyself.netlify.app/
 
 ### Looking for a variety of quotes for various reasons, this is the place.🤗👋🏾 This is a minimalistic site for quote lovers to come and receive all types of words to enhance your day and mind through meaningful words. Enjoy!
 
