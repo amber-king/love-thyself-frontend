@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
-import QuoteSearch from "./QuoteSearch";
+import QuoteSearch from "./QuoteSearch"; // fetch & function for all quotes search engine
 
 export default function AllQuotes() {
-  const [quotes, setQuotes] = useState({});
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [filteredQuotes, setFilteredQuotes] = useState([]);
+  const [quotes, setQuotes] = useState({}); // state for the quotes
+  const [loading, setLoading] = useState(true); // state for loading page
+  const [error, setError] = useState(null); // state for error handling
+  const [filteredQuotes, setFilteredQuotes] = useState([]); // state for filtering/search engine by keyword
 
   useEffect(() => {
+    // fetch for all the quotes w/ loading page & error handling
+    // reset baxk to the orignial batch of all quotes data
     const fetchQuotes = async () => {
       try {
         const response = await fetch("http://localhost:5000/api/quotes");
@@ -30,9 +32,8 @@ export default function AllQuotes() {
 
     fetchQuotes();
   }, []);
-  // console.log("Quotes:", quotes);
-  // console.log("Quotes Type:", typeof quotes);
 
+// search handle for the search engine functionality
   const handleSearch = (searchQuery) => {
     const filteredQuotes = quotes.filter((quote) =>
       quote.content.toLowerCase().includes(searchQuery.toLowerCase())
@@ -40,6 +41,7 @@ export default function AllQuotes() {
     setFilteredQuotes(filteredQuotes);
   };
 
+  // looading page & error page conditions
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -47,6 +49,7 @@ export default function AllQuotes() {
     return <div>Error:{error}</div>;
   }
 
+  // final results of the above code iterated through
   return (
     <div>
       <center>
