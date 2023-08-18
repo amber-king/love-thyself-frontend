@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+// fetches all authors w/ the amount of quotes they have - it displays as buttons the user can click through for more quotes
 const AuthorPage = () => {
   const [authors, setAuthors] = useState([]);
 
