@@ -17,7 +17,7 @@ const About = () => {
           <h2>Hi, I'm Amber King 😁👋🏾</h2>
           <bold>
             <h3>
-              Currently enrolled and finishing up my roll as a fellow at Pursuit
+              Currently enrolled and finishing up my role as a fellow at Pursuit
               Fellowship I created this application to work on my Full Stack Web
               Design skills. There was much focus on the backend work and
               research alongside CSS practice and refining, both which I desire
