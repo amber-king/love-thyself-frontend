@@ -8,7 +8,9 @@ const AuthorPage = () => {
   useEffect(() => {
     const fetchAuthors = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/authors");
+        const response = await fetch(
+          "https://love-thyself-backend-85d7b3d064df.herokuapp.com/api/authors"
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch authors");
         }
@@ -31,7 +33,9 @@ const AuthorPage = () => {
           This page contains all the authors and the number of quotes they have
           avaiable, which can be seen by clicking on the desired author
         </h4>
-        <p>⚠️ IF no results, then there was no quote that matched the author 🫤</p>
+        <p>
+          ⚠️ IF no results, then there was no quote that matched the author 🫤
+        </p>
       </center>
       <div className="author-cards">
         {authors && authors.length > 0 ? (

@@ -12,7 +12,7 @@ export default function AllQuotes() {
     // reset baxk to the orignial batch of all quotes data
     const fetchQuotes = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/quotes");
+        const response = await fetch("https://love-thyself-backend-85d7b3d064df.herokuapp.com/api/quotes");
         const data = await response.json();
         // console.log("API Response:", data);
         if (Array.isArray(data.quotes)) {

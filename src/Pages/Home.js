@@ -1,6 +1,6 @@
 import React from "react";
 
-// the ho,e/welcome page where the user is welcomed and breifly told what the site is about
+// the home/welcome page where the user is welcomed and breifly told what the site is about
 export default function Home() {
   return (
     <div className="Home">
