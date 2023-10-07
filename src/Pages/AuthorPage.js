@@ -9,7 +9,7 @@ const AuthorPage = () => {
     const fetchAuthors = async () => {
       try {
         const response = await fetch(
-          "https://love-thyself-backend-85d7b3d064df.herokuapp.com/api/authors"
+          "https://love-thyself-backend.onrender.com/api/authors"
         );
         if (!response.ok) {
           throw new Error("Failed to fetch authors");

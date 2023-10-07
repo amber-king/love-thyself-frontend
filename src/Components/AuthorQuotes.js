@@ -11,7 +11,7 @@ const AuthorQuotes = () => {
     const fetchAuthorQuotes = async () => {
       try {
         const response = await fetch(
-          `https://love-thyself-backend-85d7b3d064df.herokuapp.com/api/quotes/by-author/${authorSlug}`
+          `https://love-thyself-backend.onrender.com/api/author/${authorSlug}`
         
         );
         if (!response.ok) {
