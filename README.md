@@ -6,12 +6,10 @@
 
 - [Backend Github Repo](https://github.com/amber-king/love-thyself-backend)
 
-<!-- - <b>Heroku Backend Links:</b> <br>
-  [All Quotes W/ Search Engine](https://love-thyself-backend-85d7b3d064df.herokuapp.com/api/quotes) <br>
-  [All Authors - Pick a Author Card ](https://love-thyself-backend-85d7b3d064df.herokuapp.com/api/authors) <br>
-  [Selected Author from All Authors Page](https://love-thyself-backend-85d7b3d064df.herokuapp.com/api/quotes/by-author/${authorSlug})<i>(replace the authorSlug with the correct author name)</i> -->
-
-
+- <b>Render Backend Links:</b> <br>
+  [All Quotes W/ Search Engine](https://love-thyself-backend.onrender.com/api/quotes) <br>
+  [All Authors - Pick a Author Card ](https://love-thyself-backend.onrender.com/api/authors) <br>
+  [Selected Author from All Authors Page](https://love-thyself-backend.onrender.com/api/authors/by-author/${authorSlug})<i>(replace the authorSlug with the correct author name)</i>
 
 ### Looking for a variety of quotes for various reasons, this is the place.🤗👋🏾 This is a minimalistic site for quote lovers to come and receive all types of words to enhance your day and mind through meaningful words. Enjoy!
 
