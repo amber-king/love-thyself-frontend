@@ -11,8 +11,7 @@ const AuthorQuotes = () => {
     const fetchAuthorQuotes = async () => {
       try {
         const response = await fetch(
-          `https://love-thyself-backend.onrender.com/api/author/${authorSlug}`
-        
+          `https://love-thyself-backend.onrender.com/api/quotes/by-author/${authorSlug}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch author quotes");
